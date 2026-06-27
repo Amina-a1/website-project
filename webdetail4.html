@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Ecommerce Cart</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="webdetail4.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="container header-container">
+        <div class="brand">
+          <i class="fa-solid fa-bag-shopping brand-icon"></i>
+          <span class="brand-name">Brand</span>
+        </div>
+        <nav class="header-nav">
+          <a href="#" class="nav-item"
+            ><i class="fa-solid fa-user"></i> Profile</a
+          >
+          <a href="#" class="nav-item"
+            ><i class="fa-solid fa-comment-dots"></i> Message</a
+          >
+          <a href="#" class="nav-item"
+            ><i class="fa-solid fa-heart"></i> Orders</a
+          >
+          <a href="#" class="nav-item active"
+            ><i class="fa-solid fa-cart-shopping"></i> My cart</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <h2 class="section-title">My cart (3)</h2>
+
+      <div class="cart-layout">
+        <div class="cart-items-wrapper">
+          <div class="cart-items-list">
+            <div class="cart-item">
+              <div class="item-img-box">
+                <img
+                  src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=150&auto=format&fit=crop&q=80"
+                  alt="T-shirt with multiple colors"
+                />
+              </div>
+              <div class="item-details">
+                <h4>T-shirts with multiple colors, for men and lady</h4>
+                <p class="item-meta">
+                  Size: medium, Color: blue, Material: Cotton
+                </p>
+                <p class="item-seller">Seller: Artel Market</p>
+                <div class="item-actions">
+                  <button class="btn-remove">Remove</button>
+                  <button class="btn-secondary">Save for later</button>
+                </div>
+              </div>
+              <div class="item-pricing">
+                <span class="price">$78.99</span>
+                <div class="qty-select">
+                  <label>Qty: </label>
+                  <select>
+                    <option>9</option>
+                    <option>1</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="cart-item">
+              <div class="item-img-box">
+                <img
+                  src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=150&auto=format&fit=crop&q=80"
+                  alt="Blue Travel Bag"
+                />
+              </div>
+              <div class="item-details">
+                <h4>T-shirts with multiple colors, for men and lady</h4>
+                <p class="item-meta">
+                  Size: medium, Color: blue, Material: Plastic
+                </p>
+                <p class="item-seller">Seller: Best factory LLC</p>
+                <div class="item-actions">
+                  <button class="btn-remove">Remove</button>
+                  <button class="btn-secondary">Save for later</button>
+                </div>
+              </div>
+              <div class="item-pricing">
+                <span class="price">$39.00</span>
+                <div class="qty-select">
+                  <label>Qty: </label>
+                  <select>
+                    <option>3</option>
+                    <option>1</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="cart-item">
+              <div class="item-img-box">
+                <img
+                  src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=150&auto=format&fit=crop&q=80"
+                  alt="Modern Interior Lamp"
+                />
+              </div>
+              <div class="item-details">
+                <h4>T-shirts with multiple colors, for men and lady</h4>
+                <p class="item-meta">
+                  Size: medium, Color: blue, Material: Plastic
+                </p>
+                <p class="item-seller">Seller: Artel Market</p>
+                <div class="item-actions">
+                  <button class="btn-remove">Remove</button>
+                  <button class="btn-secondary">Save for later</button>
+                </div>
+              </div>
+              <div class="item-pricing">
+                <span class="price">$170.50</span>
+                <div class="qty-select">
+                  <label>Qty: </label>
+                  <select>
+                    <option>1</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cart-controls">
+            <button class="btn-back">
+              <i class="fa-solid fa-arrow-left"></i> Back to shop
+            </button>
+            <button class="btn-clear">Remove all</button>
+          </div>
+        </div>
+
+        <aside class="summary-sidebar">
+          <div class="summary-card coupon-card">
+            <label>Have a coupon?</label>
+            <div class="coupon-input-group">
+              <input type="text" placeholder="Add coupon" />
+              <button class="btn-coupon">Apply</button>
+            </div>
+          </div>
+
+          <div class="summary-card financial-card">
+            <div class="summary-row">
+              <span>Subtotal:</span>
+              <span>$1403.97</span>
+            </div>
+            <div class="summary-row text-danger">
+              <span>Discount:</span>
+              <span>- $60.00</span>
+            </div>
+            <div class="summary-row text-success">
+              <span>Tax:</span>
+              <span>+ $14.00</span>
+            </div>
+            <hr class="summary-divider" />
+            <div class="summary-row total-row">
+              <span>Total:</span>
+              <span>$1357.97</span>
+            </div>
+            <button class="btn-checkout">Checkout</button>
+            <div class="payment-icons">
+              <i class="fa-brands fa-cc-visa"></i>
+              <i class="fa-brands fa-cc-mastercard"></i>
+              <i class="fa-brands fa-cc-paypal"></i>
+              <i class="fa-brands fa-cc-apple-pay"></i>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <div class="trust-badges">
+        <div class="badge-item">
+          <div class="badge-icon-circle"><i class="fa-solid fa-lock"></i></div>
+          <div>
+            <h5>Secure payment</h5>
+            <p>Have you ever finally just</p>
+          </div>
+        </div>
+        <div class="badge-item">
+          <div class="badge-icon-circle">
+            <i class="fa-solid fa-comment"></i>
+          </div>
+          <div>
+            <h5>Customer support</h5>
+            <p>Have you ever finally just</p>
+          </div>
+        </div>
+        <div class="badge-item">
+          <div class="badge-icon-circle"><i class="fa-solid fa-truck"></i></div>
+          <div>
+            <h5>Free delivery</h5>
+            <p>Have you ever finally just</p>
+          </div>
+        </div>
+      </div>
+
+      <section class="saved-later-section">
+        <h3>Saved for later</h3>
+        <div class="saved-grid">
+          <div class="product-card">
+            <div class="product-img-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=250&auto=format&fit=crop&q=80"
+                alt="Tablet Slate"
+              />
+            </div>
+            <div class="product-info">
+              <h4 class="product-price">$99.50</h4>
+              <p class="product-title">GoPro HERO6 4K Action Camera - Black</p>
+              <button class="btn-cart-action">
+                <i class="fa-solid fa-cart-shopping"></i> Move to cart
+              </button>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=250&auto=format&fit=crop&q=80"
+                alt="Smartphone Device"
+              />
+            </div>
+            <div class="product-info">
+              <h4 class="product-price">$99.50</h4>
+              <p class="product-title">GoPro HERO6 4K Action Camera - Black</p>
+              <button class="btn-cart-action">
+                <i class="fa-solid fa-cart-shopping"></i> Move to cart
+              </button>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=250&auto=format&fit=crop&q=80"
+                alt="Smart Watch Slate Gray"
+              />
+            </div>
+            <div class="product-info">
+              <h4 class="product-price">$99.50</h4>
+              <p class="product-title">GoPro HERO6 4K Action Camera - Black</p>
+              <button class="btn-cart-action">
+                <i class="fa-solid fa-cart-shopping"></i> Move to cart
+              </button>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img-wrapper">
+              <img src="Assets/laptop.png" alt="Sleek Laptop Open" />
+            </div>
+            <div class="product-info">
+              <h4 class="product-price">$99.50</h4>
+              <p class="product-title">GoPro HERO6 4K Action Camera - Black</p>
+              <button class="btn-cart-action">
+                <i class="fa-solid fa-cart-shopping"></i> Move to cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="promo-banner">
+        <div class="promo-text">
+          <h3>Super discount on more than 100 USD</h3>
+          <p>Have you ever finally just write dummy info</p>
+        </div>
+        <button class="btn-promo">Shop now</button>
+      </div>
+    </main>
+
+    <footer class="main-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand-col">
+          <div class="brand">
+            <i class="fa-solid fa-bag-shopping brand-icon"></i>
+            <span class="brand-name">Brand</span>
+          </div>
+          <p class="footer-desc">
+            Best information about the company gies here but now lorem ipsum is
+          </p>
+          <div class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4>About</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Find store</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">Blogs</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Partnership</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Find store</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">Blogs</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Information</h4>
+          <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Money Refund</a></li>
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>For users</h4>
+          <ul>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Register</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">My Orders</a></li>
+          </ul>
+        </div>
+        <div class="app-download-col">
+          <h4>Get app</h4>
+          <a href="#" class="app-btn"
+            ><img
+              src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+              alt="Google Play"
+              style="width: 120px"
+          /></a>
+          <a
+            href="#"
+            class="app-btn"
+            style="margin-top: 8px; display: inline-block"
+            ><img
+              src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
+              alt="App Store"
+              style="width: 120px"
+          /></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container footer-bottom-flex">
+          <span>© 2026 Ecommerce.</span>
+          <span class="lang-selector"
+            ><i class="fa-solid fa-flag-usa"></i> English
+            <i class="fa-solid fa-chevron-up"></i
+          ></span>
+        </div>
+      </div>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>

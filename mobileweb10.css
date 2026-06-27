@@ -1,0 +1,213 @@
+/* ==========================================================================
+   1. Reset & Variables
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-header: #f0f3f6;
+    --bg-sidebar: #ffffff;
+    --bg-overlay: rgba(0, 0, 0, 0.5);
+    --text-primary: #1c2434;
+    --text-muted: #6c757d;
+    --icon-color: #8b96a5;
+    --border-color: #e3e8ee;
+    --font-family: 'Inter', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: #f7f8fa;
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   2. Sidebar Container & Layout (UPDATED)
+   ========================================================================== */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 290px;
+    height: 100vh;
+    background-color: var(--bg-sidebar);
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    /* Corrected: Starts hidden off-screen to the left */
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+/* Added: Activates sliding onto the screen when active class is applied */
+.sidebar.active {
+    transform: translateX(0);
+}
+
+/* Background darken overlay (UPDATED) */
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-overlay);
+    z-index: 999;
+    /* Corrected: Invisible and non-clickable by default */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+/* Added: Fades overlay into view when active class is applied */
+.sidebar-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* ==========================================================================
+   3. Sidebar Header (Profile & Close button)
+   ========================================================================== */
+.sidebar-header {
+    background-color: var(--bg-header);
+    padding: 24px 20px 18px 20px;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #bdc4cd;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.user-profile {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.avatar {
+    width: 44px;
+    height: 44px;
+    background-color: #cdd4dc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar i {
+    color: #ffffff;
+    font-size: 22px;
+    margin-top: 4px; /* Simulates the crop silhouette look */
+}
+
+.auth-links {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.auth-link {
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: color 0.2s;
+}
+
+.auth-link:hover {
+    color: #0d6efd;
+}
+
+.divider {
+    color: #bdc4cd;
+    margin: 0 4px;
+}
+
+/* ==========================================================================
+   4. Menu Navigation Links
+   ========================================================================== */
+.sidebar-menu {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.menu-group {
+    list-style: none;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Remove border from the last group */
+.menu-group:last-child {
+    border-bottom: none;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: var(--text-primary);
+    font-size: 15px;
+    font-weight: 400;
+    transition: background-color 0.2s;
+}
+
+.menu-item:hover {
+    background-color: #f7f9fa;
+}
+
+.menu-item .icon {
+    width: 24px;
+    font-size: 18px;
+    color: var(--icon-color);
+    margin-right: 16px;
+    text-align: center;
+}
+
+/* Text-only items in the final group */
+.legal-group {
+    padding-top: 16px;
+}
+
+.menu-item-text {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--text-primary);
+    font-size: 15px;
+    transition: background-color 0.2s;
+}
+
+.menu-item-text:hover {
+    background-color: #f7f9fa;
+}
+
+/* ==========================================================================
+   5. Responsiveness (Tablets & Desktops)
+   ========================================================================== */
+@media (min-width: 768px) {
+    /* On larger devices, you might want to embed the sidebar normally 
+       instead of letting it take over the entire view screen width */
+    .sidebar {
+        width: 260px;
+        border-right: 1px solid var(--border-color);
+        box-shadow: none;
+        transform: translateX(0); /* Ensure visible on desktop layout structures */
+    }
+    
+    /* Hide overlay and close button if it's integrated into a desktop layout */
+    .sidebar-overlay, .close-btn {
+        display: none;
+    }
+}

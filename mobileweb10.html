@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Menu Sidebar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="mobileweb10.css">
+</head>
+<body>
+
+    <div class="sidebar-overlay"></div>
+
+    <aside class="sidebar">
+        
+        <div class="sidebar-header">
+            <button class="close-btn" aria-label="Close menu">&times;</button>
+            <div class="user-profile">
+                <div class="avatar">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="auth-links">
+                    <a href="#" class="auth-link">Sign in</a>
+                    <span class="divider">|</span>
+                    <a href="#" class="auth-link">Register</a>
+                </div>
+            </div>
+        </div>
+
+        <nav class="sidebar-menu">
+            <ul class="menu-group">
+                <li>
+                    <a href="#" class="menu-item">
+                        <i class="fa-solid fa-house icon"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="menu-item">
+                        <i class="fa-solid fa-list icon"></i>
+                        <span>Categories</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="menu-item">
+                        <i class="fa-regular fa-heart icon"></i>
+                        <span>Favorites</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="menu-item">
+                        <i class="fa-solid fa-box-archive icon"></i>
+                        <span>My orders</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="menu-group">
+                <li>
+                    <a href="#" class="menu-item">
+                        <i class="fa-solid fa-earth-americas icon"></i>
+                        <span>English | USD</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="menu-item">
+                        <i class="fa-solid fa-headset icon"></i>
+                        <span>Contact us</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="menu-item">
+                        <i class="fa-solid fa-building icon"></i>
+                        <span>About</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="menu-group legal-group">
+                <li><a href="#" class="menu-item-text">User agreement</a></li>
+                <li><a href="#" class="menu-item-text">Partnership</a></li>
+                <li><a href="#" class="menu-item-text">Privacy policy</a></li>
+            </ul>
+        </nav>
+    </aside>
+<script src="main.js"></script>
+</body>
+</html>

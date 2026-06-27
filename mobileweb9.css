@@ -1,0 +1,375 @@
+/* ==========================================================================
+   1. System Resets & Variables
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-primary: #f7f8fa;
+    --bg-card: #ffffff;
+    --text-main: #1c2434;
+    --text-muted: #8b96a5;
+    --text-light: #a9b4cd;
+    --border-color: #eff2f4;
+    --checkout-green: #00b517;
+    --checkout-green-hover: #009a13;
+    --btn-border: #e3e8ee;
+    --btn-text-red: #fa3434;
+    --btn-text-blue: #0d6efd;
+    --font-family: 'Inter', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-primary);
+    color: var(--text-main);
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px 40px 16px;
+}
+
+/* ==========================================================================
+   2. Header
+   ========================================================================== */
+.cart-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 0;
+    background-color: var(--bg-primary);
+}
+
+.back-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: var(--text-main);
+    cursor: pointer;
+}
+
+.cart-header h1 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   3. Main Cart Layout (Active items & Pricing Container)
+   ========================================================================== */
+.cart-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cart-items-list {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Individual Cart Item Line */
+.cart-item {
+    display: flex;
+    gap: 16px;
+    padding: 20px 0;
+    background-color: var(--bg-card);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.cart-item:first-child {
+    padding-top: 10px;
+}
+
+.item-img-container {
+    width: 80px;
+    height: 80px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    flex-shrink: 0;
+}
+
+.item-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.item-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.item-title {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.3;
+    color: var(--text-main);
+}
+
+.more-options-btn {
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0 4px;
+}
+
+.item-meta, .item-seller {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 4px;
+}
+
+/* Actions Floor (Qty Select + Price Alignment) */
+.item-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 14px;
+}
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--btn-border);
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.qty-btn {
+    background: none;
+    border: none;
+    width: 36px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-light);
+    cursor: pointer;
+    font-size: 12px;
+    transition: background 0.2s;
+}
+
+.qty-btn:hover {
+    background-color: var(--bg-primary);
+}
+
+.qty-value {
+    width: 36px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    border-left: 1px solid var(--btn-border);
+    border-right: 1px solid var(--btn-border);
+    line-height: 32px;
+}
+
+.item-price {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+/* ==========================================================================
+   4. Order Financial Summary
+   ========================================================================== */
+.summary-section {
+    background-color: var(--bg-card);
+    border-top: 1px solid var(--border-color);
+    padding: 20px 0;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: var(--text-muted);
+}
+
+.summary-value {
+    color: var(--text-main);
+}
+
+.summary-divider {
+    border: none;
+    border-top: 1px solid var(--border-color);
+    margin: 14px 0;
+}
+
+.total-row {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-main);
+    margin-bottom: 20px;
+}
+
+.total-value {
+    font-size: 18px;
+}
+
+.checkout-btn {
+    width: 100%;
+    background-color: var(--checkout-green);
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 14px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.checkout-btn:hover {
+    background-color: var(--checkout-green-hover);
+}
+
+/* ==========================================================================
+   5. Saved For Later Section
+   ========================================================================== */
+.saved-section {
+    margin-top: 32px;
+}
+
+.saved-heading {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.saved-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.saved-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    display: flex;
+    padding: 12px;
+    gap: 16px;
+}
+
+.saved-img-container {
+    width: 76px;
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.saved-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.saved-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.saved-title {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-muted);
+}
+
+.saved-price {
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+.saved-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.btn-move, .btn-remove {
+    background: #ffffff;
+    border: 1px solid var(--btn-border);
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-move {
+    color: var(--btn-text-blue);
+}
+
+.btn-remove {
+    color: var(--btn-text-red);
+}
+
+.btn-move:hover, .btn-remove:hover {
+    background-color: var(--bg-primary);
+}
+
+/* ==========================================================================
+   6. Media Queries for Tablet & Laptop view
+   ========================================================================== */
+@media (min-width: 768px) {
+    /* Split Cart items and Summary into standard split screen columns */
+    .cart-layout {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .cart-items-section {
+        flex: 2;
+    }
+
+    .summary-section {
+        flex: 1;
+        position: sticky;
+        top: 20px;
+        border: 1px solid var(--border-color);
+        border-radius: 6px;
+        padding: 24px;
+    }
+
+    .cart-item {
+        border: 1px solid var(--border-color);
+        border-radius: 6px;
+        padding: 20px;
+        margin-bottom: 12px;
+    }
+
+    /* Grid configuration for Saved Items on larger display monitors */
+    .saved-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 16px;
+    }
+}

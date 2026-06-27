@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="mobileweb9.css">
+</head>
+<body>
+
+    <div class="container">
+        <header class="cart-header">
+            <button class="back-btn" aria-label="Go back" onclick="window.location.href='mobileweb6.html';">
+                <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <h1>Shopping cart</h1>
+        </header>
+
+        <main class="cart-layout">
+            
+            <section class="cart-items-section">
+                <div class="cart-items-list">
+                    
+                    <div class="cart-item">
+                        <div class="item-img-container">
+                            <img src="https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=150&auto=format&fit=crop&q=80" alt="T-shirts with multiple colors for men" class="item-img">
+                        </div>
+                        <div class="item-details">
+                            <div class="item-header">
+                                <h2 class="item-title">T-shirts with multiple colors for men</h2>
+                                <button class="more-options-btn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                            </div>
+                            <p class="item-meta">Size: medium, Color: blue</p>
+                            <p class="item-seller">Seller: Artel Market</p>
+                            
+                            <div class="item-actions">
+                                <div class="quantity-selector">
+                                    <button class="qty-btn" aria-label="Decrease quantity"><i class="fa-solid fa-minus"></i></button>
+                                    <span class="qty-value">2</span>
+                                    <button class="qty-btn" aria-label="Increase quantity"><i class="fa-solid fa-plus"></i></button>
+                                </div>
+                                <span class="item-price">$78.99</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cart-item">
+                        <div class="item-img-container">
+                            <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=150&auto=format&fit=crop&q=80" alt="Solid Backpack blue jeans large size" class="item-img">
+                        </div>
+                        <div class="item-details">
+                            <div class="item-header">
+                                <h2 class="item-title">Solid Backpack blue jeans large size</h2>
+                                <button class="more-options-btn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                            </div>
+                            <p class="item-meta">Size: medium, Color: blue</p>
+                            <p class="item-seller">Seller: Artel Market</p>
+                            
+                            <div class="item-actions">
+                                <div class="quantity-selector">
+                                    <button class="qty-btn" aria-label="Decrease quantity"><i class="fa-solid fa-minus"></i></button>
+                                    <span class="qty-value">1</span>
+                                    <button class="qty-btn" aria-label="Increase quantity"><i class="fa-solid fa-plus"></i></button>
+                                </div>
+                                <span class="item-price">$78.99</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cart-item">
+                        <div class="item-img-container">
+                            <img src="https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?w=150&auto=format&fit=crop&q=80" alt="Water boiler black for kitchen" class="item-img">
+                        </div>
+                        <div class="item-details">
+                            <div class="item-header">
+                                <h2 class="item-title">Water boiler black for kitchen, 1200 Watt</h2>
+                                <button class="more-options-btn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                            </div>
+                            <p class="item-meta">Size: medium, Color: blue</p>
+                            <p class="item-seller">Seller: Artel Market</p>
+                            
+                            <div class="item-actions">
+                                <div class="quantity-selector">
+                                    <button class="qty-btn" aria-label="Decrease quantity"><i class="fa-solid fa-minus"></i></button>
+                                    <span class="qty-value">2</span>
+                                    <button class="qty-btn" aria-label="Increase quantity"><i class="fa-solid fa-plus"></i></button>
+                                </div>
+                                <span class="item-price">$78.99</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="summary-section">
+                <div class="summary-card">
+                    <div class="summary-row">
+                        <span class="summary-label">Items (3):</span>
+                        <span class="summary-value">$32.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span class="summary-label">Shipping:</span>
+                        <span class="summary-value">$10.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span class="summary-label">Tax:</span>
+                        <span class="summary-value">$7.00</span>
+                    </div>
+                    <hr class="summary-divider">
+                    <div class="summary-row total-row">
+                        <span class="total-label">Total:</span>
+                        <span class="total-value">$220.00</span>
+                    </div>
+                    <button class="checkout-btn">Checkout (3 items)</button>
+                </div>
+            </section>
+
+        </main>
+
+        <section class="saved-section">
+            <h2 class="saved-heading">Saved for later</h2>
+            <div class="saved-grid">
+                
+                <div class="saved-card">
+                    <div class="saved-img-container">
+                        <img src="https://images.unsplash.com/photo-1608248597481-496100c80836?w=150&auto=format&fit=crop&q=80" alt="Blue Gaming Headphones" class="saved-img">
+                    </div>
+                    <div class="saved-details">
+                        <h3 class="saved-title">Regular Fit Resort Shirt</h3>
+                        <p class="saved-price">$57.70</p>
+                        <div class="saved-actions">
+                            <button class="btn-move">Move to cart</button>
+                            <button class="btn-remove">Remove</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="saved-card">
+                    <div class="saved-img-container">
+                        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=150&auto=format&fit=crop&q=80" alt="Smartphone" class="saved-img">
+                    </div>
+                    <div class="saved-details">
+                        <h3 class="saved-title">Regular Fit Resort Shirt</h3>
+                        <p class="saved-price">$57.70</p>
+                        <div class="saved-actions">
+                            <button class="btn-move">Move to cart</button>
+                            <button class="btn-remove">Remove</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="saved-card">
+                    <div class="saved-img-container">
+                        <img src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=150&auto=format&fit=crop&q=80" alt="Smartwatch" class="saved-img">
+                    </div>
+                    <div class="saved-details">
+                        <h3 class="saved-title">Regular Fit Resort Shirt</h3>
+                        <p class="saved-price">$57.70</p>
+                        <div class="saved-actions">
+                            <button class="btn-move">Move to cart</button>
+                            <button class="btn-remove">Remove</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+<script src="main.js"></script>
+</body>
+</html>
